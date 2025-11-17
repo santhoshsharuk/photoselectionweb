@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Selection - Smart, Private & Easy Client Photo Selection Tool</title>
+    <title>Photo Selection - Premium Client Gallery & Selection Tool for Professional Photographers</title>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -14,251 +14,617 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <!-- Cursor Follower -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="logo">Photo Selection</a>
-            <div class="nav-toggle">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 40 40" class="logo-svg">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <path d="M20 8 L20 20 L28 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">Photo<span class="logo-accent">Selection</span></span>
+            </a>
+            <div class="nav-toggle" id="navToggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#how_it_works">How It Works</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://wa.me/918110960489?text=Hi%20Santhosh,%20I%27m%20interested%20in%20the%20Photo%20Selection%20tool.%20I%27d%20like%20to%20request%20a%20demo." class="nav-button">Request Demo</a></li>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#workflow" class="nav-link">Workflow</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="https://wa.me/918110960489?text=Hi%20Santhosh,%20I%27m%20interested%20in%20the%20Photo%20Selection%20tool.%20I%27d%20like%20to%20request%20a%20demo." class="nav-cta">Request Demo</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="container">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-container">
             <div class="hero-content">
-                <h1>Photo Selection Tool for Photographers</h1>
-                <p>Let your clients view and select their favorite photos — without uploading anything online.</p>
-                <div class="cta-buttons">
-                    <a href="#" class="btn primary" id="watchDemoBtn">Watch Demo</a>
-                    <a href="https://wa.me/918110960489?text=Hi%20Santhosh,%20I%27m%20interested%20in%20the%20Photo%20Selection%20tool.%20I%27d%20like%20to%20get%20started." class="btn secondary">Get Started</a>
+                <div class="hero-label" data-aos="fade-up">
+                    <span class="label-icon">✨</span>
+                    <span>Premium Client Gallery Solution</span>
+                </div>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                    <span class="title-line">Elevate Your</span>
+                    <span class="title-line gradient-text">Photography Business</span>
+                </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Let your clients view and select their favorite photos in a stunning, 
+                    <span class="highlight">secure gallery</span> — without uploading anything online.
+                </p>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="250">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Privacy</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">10x</div>
+                        <div class="stat-label">Faster</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Studios</div>
+                    </div>
+                </div>
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#" class="btn btn-primary" id="watchDemoBtn">
+                        <span class="btn-text">Watch Demo</span>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M8 5v14l11-7z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="btn-glow"></span>
+                    </a>
+                    <a href="https://wa.me/918110960489?text=Hi%20Santhosh,%20I%27m%20interested%20in%20the%20Photo%20Selection%20tool.%20I%27d%20like%20to%20get%20started." class="btn btn-secondary">
+                        <span class="btn-text">Get Started Free</span>
+                        <span class="btn-icon">→</span>
+                    </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="video-preview-container">
-                    <img src="assets/youtube_banner.png" alt="Photo Selection Demo Video">
-                    <button class="play-button" id="heroPlayButton">
-                        <svg viewBox="0 0 24 24" width="64" height="64">
-                            <circle cx="12" cy="12" r="11" fill="#fff"/>
-                            <path d="M9.5 7.5v9l7.5-4.5-7.5-4.5z" fill="#1A73E8"/>
-                        </svg>
-                    </button>
-                    <div class="video-label">
-                        Watch How It Works (30 Seconds)
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
+                <div class="visual-wrapper">
+                    <div class="visual-glow"></div>
+                    <div class="video-preview-container">
+                        <img src="assets/youtube_banner.png" alt="Photo Selection Demo" class="preview-image">
+                        <div class="play-button-wrapper" id="heroPlayButton">
+                            <div class="play-pulse"></div>
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24" width="32" height="32">
+                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="video-badge">
+                            <span class="badge-dot"></span>
+                            <span>30 Seconds Demo</span>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1" data-parallax="2">
+                        <div class="card-icon">🔒</div>
+                        <div class="card-text">100% Private</div>
+                    </div>
+                    <div class="floating-card card-2" data-parallax="3">
+                        <div class="card-icon">⚡</div>
+                        <div class="card-text">Lightning Fast</div>
+                    </div>
+                    <div class="floating-card card-3" data-parallax="1.5">
+                        <div class="card-icon">✨</div>
+                        <div class="card-text">Premium Quality</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <h2>About Photo Selection</h2>
-                <p>Photo Selection is a secure client proofing tool that helps photographers share photos directly from their computer. Clients can easily view and choose their favorite photos — fully private and fast. Perfect for wedding, event, and portrait photographers.</p>
-                <ul class="highlights">
-                    <li>No cloud upload required</li>
-                    <li>Clients view and select directly from your system</li>
-                    <li>Fully private and secure</li>
-                    <li>Professional and time-saving workflow</li>
-                </ul>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-icon">
+                <div class="scroll-wheel"></div>
             </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how_it_works" class="how-it-works">
-        <div class="container">
-            <h2>How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Select Folder</h3>
-                    <p>Choose the folder containing the client's photos on your system.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Launch Gallery</h3>
-                    <p>Start the tool — it instantly creates a private web gallery.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Client Views & Selects</h3>
-                    <p>Share the secure link and password. Clients can view and select photos easily.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>You Get Their Selection</h3>
-                    <p>Selections are saved directly on your system — ready for editing or album design.</p>
-                </div>
-            </div>
-            <img src="assets/how_it_works.png" alt="How Photo Selection Works" class="workflow-image">
         </div>
     </section>
 
     <!-- Features Section -->
     <section id="features" class="features">
-        <div class="container">
-            <h2>Key Features</h2>
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Why Choose Us</span>
+                <h2 class="section-title">
+                    Powerful Features for
+                    <span class="gradient-text">Modern Photographers</span>
+                </h2>
+                <p class="section-description">
+                    Everything you need to deliver a premium client experience
+                </p>
+            </div>
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>100% Privacy</h3>
-                    <p>Your photos never leave your computer.</p>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <div class="feature-icon">🔒</div>
+                    </div>
+                    <h3 class="feature-title">100% Privacy Guaranteed</h3>
+                    <p class="feature-description">Your photos never leave your computer. Complete control over your precious work.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Fast & Easy</h3>
-                    <p>No upload time — share instantly.</p>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <div class="feature-icon">⚡</div>
+                    </div>
+                    <h3 class="feature-title">Lightning Fast Delivery</h3>
+                    <p class="feature-description">No upload time. Share thousands of photos instantly with your clients.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💼</div>
-                    <h3>Professional Look</h3>
-                    <p>Give your clients a beautiful, branded experience.</p>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <div class="feature-icon">💎</div>
+                    </div>
+                    <h3 class="feature-title">Premium Experience</h3>
+                    <p class="feature-description">Beautiful, branded galleries that impress clients and elevate your brand.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🖥️</div>
-                    <h3>Local Control</h3>
-                    <p>Everything runs from your PC — simple and secure.</p>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <div class="feature-icon">🖥️</div>
+                    </div>
+                    <h3 class="feature-title">Full Local Control</h3>
+                    <p class="feature-description">Runs entirely from your PC. Simple, secure, and always under your control.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <div class="feature-icon">📱</div>
+                    </div>
+                    <h3 class="feature-title">Mobile Optimized</h3>
+                    <p class="feature-description">Clients can view and select on any device - phone, tablet, or desktop.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <div class="feature-icon">🎨</div>
+                    </div>
+                    <h3 class="feature-title">Smart Organization</h3>
+                    <p class="feature-description">Automatic sorting and organization. Get only the photos clients love.</p>
+                    <div class="feature-link">
+                        <span>Learn more</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Use Cases Section -->
-    <section id="use_cases" class="use-cases">
-        <div class="container">
-            <h2>Who Can Use Photo Selection</h2>
-            <div class="use-cases-grid">
-                <div class="use-case">
-                    <h3>Wedding Photographers</h3>
-                    <p>Let couples choose their favorite photos easily.</p>
+    <!-- Workflow Section -->
+    <section id="workflow" class="workflow">
+        <div class="workflow-bg"></div>
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Simple Process</span>
+                <h2 class="section-title">
+                    How It Works in
+                    <span class="gradient-text">4 Easy Steps</span>
+                </h2>
+            </div>
+            <div class="workflow-content">
+                <div class="workflow-visual" data-aos="fade-right">
+                    <div class="workflow-image-wrapper">
+                        <img src="assets/how_it_works.png" alt="Workflow" class="workflow-img">
+                        <div class="workflow-glow"></div>
+                    </div>
                 </div>
-                <div class="use-case">
-                    <h3>Studios</h3>
-                    <p>Speed up client selection and editing workflow.</p>
-                </div>
-                <div class="use-case">
-                    <h3>Freelancers</h3>
-                    <p>Provide a premium client experience without expensive cloud tools.</p>
-                </div>
-                <div class="use-case">
-                    <h3>Photo Editors</h3>
-                    <p>Get only the selected files — no confusion, no manual sorting.</p>
+                <div class="workflow-steps">
+                    <div class="workflow-step" data-aos="fade-left" data-aos-delay="100">
+                        <div class="step-number">
+                            <span>01</span>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Select Your Folder</h3>
+                            <p>Choose the folder containing your client's photos on your system</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step" data-aos="fade-left" data-aos-delay="200">
+                        <div class="step-number">
+                            <span>02</span>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Launch Gallery</h3>
+                            <p>Click start and instantly create a beautiful private gallery</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step" data-aos="fade-left" data-aos-delay="300">
+                        <div class="step-number">
+                            <span>03</span>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Share Securely</h3>
+                            <p>Send the secure link and password to your client</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step" data-aos="fade-left" data-aos-delay="400">
+                        <div class="step-number">
+                            <span>04</span>
+                        </div>
+                        <div class="step-content">
+                            <h3>Get Selections</h3>
+                            <p>Receive organized selections saved directly on your system</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Investment</span>
+                <h2 class="section-title">
+                    Simple, Transparent
+                    <span class="gradient-text">Pricing</span>
+                </h2>
+                <p class="section-description">
+                    One-time purchase. Lifetime access. No subscriptions.
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-header">
+                        <div class="pricing-icon">📸</div>
+                        <h3 class="pricing-name">Starter</h3>
+                        <p class="pricing-subtitle">Perfect for freelancers</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">₹</span>
+                        <span class="amount">4,999</span>
+                        <span class="period">one-time</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Unlimited galleries</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Up to 5,000 photos/session</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Password protection</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Email support</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Lifetime updates</li>
+                    </ul>
+                    <a href="https://wa.me/918110960489?text=Hi,%20I%27m%20interested%20in%20the%20Starter%20plan" class="pricing-btn">
+                        <span>Get Started</span>
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <div class="pricing-icon">🏆</div>
+                        <h3 class="pricing-name">Professional</h3>
+                        <p class="pricing-subtitle">For studios & agencies</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">₹</span>
+                        <span class="amount">9,999</span>
+                        <span class="period">one-time</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Everything in Starter</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Unlimited photos/session</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Custom branding</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Priority support</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Multi-device access</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Advanced analytics</li>
+                    </ul>
+                    <a href="https://wa.me/918110960489?text=Hi,%20I%27m%20interested%20in%20the%20Professional%20plan" class="pricing-btn">
+                        <span>Get Started</span>
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-header">
+                        <div class="pricing-icon">💼</div>
+                        <h3 class="pricing-name">Enterprise</h3>
+                        <p class="pricing-subtitle">Custom solutions</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="amount-text">Custom</span>
+                        <span class="period">Contact us</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Everything in Professional</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>White-label solution</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Custom integrations</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Dedicated support</li>
+                        <li><svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>Training & onboarding</li>
+                    </ul>
+                    <a href="https://wa.me/918110960489?text=Hi,%20I%27m%20interested%20in%20Enterprise%20solutions" class="pricing-btn">
+                        <span>Contact Sales</span>
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>What Photographers Say</h2>
-            <div class="testimonials-carousel">
-                <div class="testimonial">
-                    <p class="testimonial-text">This tool saved us hours of upload time! Clients love how simple it is.</p>
-                    <div class="testimonial-author">
-                        <h4>Arun Studio</h4>
-                        <p>Chennai</p>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-text">A perfect balance of privacy and speed. Every studio should have this.</p>
-                    <div class="testimonial-author">
-                        <h4>LensView Photography</h4>
-                        <p>Coimbatore</p>
-                    </div>
-                </div>
+        <div class="testimonials-bg"></div>
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Success Stories</span>
+                <h2 class="section-title">
+                    Loved by
+                    <span class="gradient-text">Professional Photographers</span>
+                </h2>
             </div>
-            <div class="carousel-controls">
-                <button class="prev">Previous</button>
-                <button class="next">Next</button>
+            <div class="testimonials-wrapper">
+                <button class="testimonial-nav prev" id="testimonialPrev">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                </button>
+                <div class="testimonials-slider" id="testimonialsSlider">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                            </div>
+                            <p class="testimonial-text">"This tool completely transformed our workflow. We used to spend hours uploading photos to cloud services. Now we share galleries instantly, and our clients love the beautiful interface. It's a game-changer!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="https://ui-avatars.com/api/?name=Arun+Kumar&background=FF6B35&color=fff" alt="Arun Kumar">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Arun Kumar</h4>
+                                    <p>Arun Studio, Chennai</p>
+                                    <span class="author-badge">Wedding Photographer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                            </div>
+                            <p class="testimonial-text">"The perfect balance of privacy, speed, and professionalism. Our clients appreciate the security of knowing their photos aren't on some cloud server. Every photography studio should have this tool."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="https://ui-avatars.com/api/?name=Priya+Sharma&background=FF6B35&color=fff" alt="Priya Sharma">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Priya Sharma</h4>
+                                    <p>LensView Photography, Coimbatore</p>
+                                    <span class="author-badge">Portrait Specialist</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></svg>
+                            </div>
+                            <p class="testimonial-text">"As a freelancer, I can't afford expensive monthly subscriptions. This one-time investment has paid for itself many times over. My clients love it, and I save so much time. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="https://ui-avatars.com/api/?name=Raj+Patel&background=FF6B35&color=fff" alt="Raj Patel">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Raj Patel</h4>
+                                    <p>Freelance Photographer, Mumbai</p>
+                                    <span class="author-badge">Event Photography</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="testimonial-nav next" id="testimonialNext">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="testimonials-dots" id="testimonialsDots">
+                <button class="dot active" data-index="0"></button>
+                <button class="dot" data-index="1"></button>
+                <button class="dot" data-index="2"></button>
             </div>
         </div>
     </section>
 
     <!-- CTA Banner -->
-    <section id="cta_banner" class="cta-banner">
-        <div class="container">
-            <h2>Ready to Simplify Your Client Workflow?</h2>
-            <p>Get the Photo Selection tool today and deliver a faster, smarter client experience.</p>
-            <a href="https://wa.me/918110960489?text=Hi%20Santhosh,%20I%27m%20interested%20in%20the%20Photo%20Selection%20tool.%20I%27d%20like%20to%20request%20a%20demo." class="btn primary">Request Demo</a>
+    <section id="cta_banner" class="cta-section">
+        <div class="cta-bg-gradient"></div>
+        <div class="cta-particles"></div>
+        <div class="section-container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">
+                    Ready to Transform Your
+                    <span class="gradient-text">Photography Workflow?</span>
+                </h2>
+                <p class="cta-description">
+                    Join 500+ photographers who have simplified their client experience. 
+                    Get started today with a free demo.
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/918110960489?text=Hi%20Santhosh,%20I%27m%20interested%20in%20the%20Photo%20Selection%20tool.%20I%27d%20like%20to%20request%20a%20demo." class="btn btn-primary btn-large">
+                        <span class="btn-text">Request Free Demo</span>
+                        <span class="btn-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </span>
+                        <span class="btn-glow"></span>
+                    </a>
+                    <a href="#pricing" class="btn btn-outline btn-large">
+                        <span class="btn-text">View Pricing</span>
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                        </svg>
+                        <span>No credit card required</span>
+                    </div>
+                    <div class="cta-feature">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                        </svg>
+                        <span>Setup in 5 minutes</span>
+                    </div>
+                    <div class="cta-feature">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
+                        </svg>
+                        <span>Lifetime updates</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-header">
-                <h2 class="animated-title">Get in Touch</h2>
-                <p class="subtitle">Ready to transform your photo selection workflow?</p>
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">
+                    Let's Start Your
+                    <span class="gradient-text">Success Story</span>
+                </h2>
             </div>
             <div class="contact-content">
-                <div class="contact-card">
-                    <div class="profile-section">
-                        <div class="profile-image">
-                            <img src="https://santhoshsharuk.me/image/santhosh-sharuk.jpg" alt="Santhosh Sharuk" class="avatar">
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-profile">
+                        <div class="profile-image-wrapper">
+                            <div class="profile-glow"></div>
+                            <img src="https://santhoshsharuk.me/image/santhosh-sharuk.jpg" alt="Santhosh Sharuk" class="profile-image">
+                            <div class="profile-status">
+                                <span class="status-dot"></span>
+                                <span>Available</span>
+                            </div>
                         </div>
                         <div class="profile-info">
                             <h3>Santhosh Sharuk</h3>
-                            <span class="location">
-                                <svg viewBox="0 0 24 24" width="16" height="16" class="location-icon">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            <p class="profile-title">Founder & Developer</p>
+                            <div class="profile-location">
+                                <svg viewBox="0 0 24 24" width="16" height="16">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
                                 </svg>
-                                Chennai, India
-                            </span>
+                                <span>Chennai, India</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="connect-section">
-                        <p class="connect-text">Choose your preferred way to connect:</p>
-                        <div class="contact-buttons">
-                            <a href="https://wa.me/918110960489?text=Hi%20Santhosh,%20I%27m%20interested%20in%20the%20Photo%20Selection%20tool.%20I%27d%20like%20to%20learn%20more%20about%20its%20features%20and%20pricing." class="contact-button whatsapp" data-tooltip="Quick response within 2 hours">
-                                <span class="button-content">
-                                    <svg viewBox="0 0 24 24" class="button-icon">
-                                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
-                                    </svg>
-                                    <span class="button-text">
-                                        <span class="primary-text">WhatsApp Chat</span>
-                                        <span class="secondary-text">Instant Connect</span>
-                                    </span>
-                                </span>
-                            </a>
-                            <a href="tel:+918110960489" class="contact-button phone" data-tooltip="Available 9 AM - 6 PM IST">
-                                <span class="button-content">
-                                    <svg viewBox="0 0 24 24" class="button-icon">
-                                        <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
-                                    </svg>
-                                    <span class="button-text">
-                                        <span class="primary-text">Direct Call</span>
-                                        <span class="secondary-text">+91 8110960489</span>
-                                    </span>
-                                </span>
-                            </a>
-                            <a href="mailto:santhoshsharuk16@gmail.com" class="contact-button email" data-tooltip="Response within 24 hours">
-                                <span class="button-content">
-                                    <svg viewBox="0 0 24 24" class="button-icon">
-                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                    </svg>
-                                    <span class="button-text">
-                                        <span class="primary-text">Send Email</span>
-                                        <span class="secondary-text">Detailed Inquiry</span>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
+                    <div class="contact-methods">
+                        <a href="https://wa.me/918110960489?text=Hi%20Santhosh,%20I%27m%20interested%20in%20the%20Photo%20Selection%20tool.%20I%27d%20like%20to%20learn%20more%20about%20its%20features%20and%20pricing." class="contact-method whatsapp">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <div class="method-title">WhatsApp Chat</div>
+                                <div class="method-subtitle">Instant response</div>
+                            </div>
+                            <div class="method-arrow">
+                                <svg viewBox="0 0 24 24" width="20" height="20">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="tel:+918110960489" class="contact-method phone">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <div class="method-title">Direct Call</div>
+                                <div class="method-subtitle">+91 8110960489</div>
+                            </div>
+                            <div class="method-arrow">
+                                <svg viewBox="0 0 24 24" width="20" height="20">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="mailto:santhoshsharuk16@gmail.com" class="contact-method email">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <div class="method-title">Send Email</div>
+                                <div class="method-subtitle">Detailed inquiry</div>
+                            </div>
+                            <div class="method-arrow">
+                                <svg viewBox="0 0 24 24" width="20" height="20">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -267,15 +633,60 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="copyright">
-                    © 2025 Photo Selection. All rights reserved.
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 40 40" class="logo-svg">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            <path d="M20 8 L20 20 L28 20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                        <span>Photo<span class="logo-accent">Selection</span></span>
+                    </div>
+                    <p class="footer-tagline">Elevating photography workflows worldwide</p>
                 </div>
-                <div class="social-links">
-                    <a href="https://youtu.be/5tZn6lqABsY" target="_blank">YouTube</a>
-                    <a href="#" target="_blank">Instagram</a>
-                    <a href="https://wa.me/918110960489" target="_blank">WhatsApp</a>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#testimonials">Reviews</a></li>
+                            <li><a href="#workflow">How It Works</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="https://wa.me/918110960489">WhatsApp</a></li>
+                            <li><a href="mailto:santhoshsharuk16@gmail.com">Email</a></li>
+                            <li><a href="tel:+918110960489">Call</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://youtu.be/5tZn6lqABsY" target="_blank">YouTube</a></li>
+                            <li><a href="https://wa.me/918110960489" target="_blank">WhatsApp</a></li>
+                            <li><a href="https://santhoshsharuk.me" target="_blank">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 PhotoSelection. Crafted with ❤️ in Chennai</p>
+                <div class="footer-socials">
+                    <a href="https://youtu.be/5tZn6lqABsY" target="_blank" class="social-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/918110960489" target="_blank" class="social-link">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z" fill="currentColor"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
